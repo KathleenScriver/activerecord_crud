@@ -1,4 +1,6 @@
-
+Cat.destroy_all
+Breed.destroy_all
+Owner.destroy_all
 
 tabby = Breed.find_or_create_by(name: "Tabby",
                      pattern: "Stripes",
@@ -18,6 +20,10 @@ siamese = Breed.find_or_create_by(name: "Siamese",
                      avg_price: 9000.50
                     )
 
-bob = Owner.find_or_create_by(name: "bob")
+bob = Owner.find_or_create_by(name: "bob", age: 32)
+sally = Owner.find_or_create_by(name: "Sally", age: 28)
 
-kitty = Cat.find_or_create_by(name: "Kitty", owner: bob, breed: tortie, hair_length: "long")
+kitty = Cat.find_or_create_by(name: "Kitty", age: 2, hair_length: "long")
+fluffy = Cat.find_or_create_by(name: "Fluffy", age: 5, hair_length: "medium")
+kona = Cat.find_or_create_by(name: "Kona", age: 1, hair_length: "long")
+groucho = Cat.find_or_create_by(name: "Groucho", age: 12, hair_length: "short")
